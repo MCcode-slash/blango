@@ -30,6 +30,7 @@ class Post(models.Model):
     summary = models.TextField(max_length=500)
     comments = GenericRelation(Comment)
     tags = models.ManyToManyField(Tag, related_name="posts")
+    content = models.TextField()
 
     def __str__(self):
         return self.title
