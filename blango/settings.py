@@ -45,6 +45,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'crispy_forms',
+    'crispy_bootstrap5',
     'blog',
 ]
 
@@ -132,3 +134,9 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Add in the extra settings
+#CRISPY_ALLOWED_TEMPLATE_PACK = ('uni_form','bootstrap', 'bootstrap3', 'bootstrap4','bootstrap5')
+#CRISPY_TEMPLATE_PACK = ('bootstrap5', 'uni_form')
+CRISPY_ALLOWED_TEMPLATE_PACK = 'bootstrap5'
+CRISPY_TEMPLATE_PACK = 'bootstrap5'
