@@ -52,6 +52,7 @@ class Dev(Configuration):
         'crispy_forms',
         'crispy_bootstrap5',
         'blog',
+        'debug_toolbar',
     ]
 
     MIDDLEWARE = [
@@ -62,6 +63,7 @@ class Dev(Configuration):
         'django.contrib.auth.middleware.AuthenticationMiddleware',
         'django.contrib.messages.middleware.MessageMiddleware',
     #   'django.middleware.clickjacking.XFrameOptionsMiddleware',
+        'debug_toolbar.middleware.DebugToolbarMiddleware',
     ]
 
     ROOT_URLCONF = 'blango.urls'
@@ -191,6 +193,8 @@ class Dev(Configuration):
     #CRISPY_TEMPLATE_PACK = ('bootstrap5', 'uni_form')
     CRISPY_ALLOWED_TEMPLATE_PACK = 'bootstrap5'
     CRISPY_TEMPLATE_PACK = 'bootstrap5'
+
+    INTERNAL_IPS = ["192.168.10.92","192.168.10.31", "192.168.11.136"]
 
 class Prod(Dev):
     DEBUG = False
