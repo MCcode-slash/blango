@@ -167,6 +167,11 @@ class Dev(Configuration):
         },
     }
 
+    EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+    
+    ACCOUNT_ACTIVATION_DAYS = 7
+    #REGISTRATION_OPEN = False # to close the registration ability
+
     # Internationalization
     # https://docs.djangoproject.com/en/3.2/topics/i18n/
 
@@ -192,10 +197,10 @@ class Dev(Configuration):
     DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
     # Add in the extra settings
-    #CRISPY_ALLOWED_TEMPLATE_PACK = ('uni_form','bootstrap', 'bootstrap3', 'bootstrap4','bootstrap5')
-    #CRISPY_TEMPLATE_PACK = ('bootstrap5', 'uni_form')
-    CRISPY_ALLOWED_TEMPLATE_PACK = 'bootstrap5'
-    CRISPY_TEMPLATE_PACK = 'bootstrap5'
+    CRISPY_ALLOWED_TEMPLATE_PACK = ('uni_form','bootstrap', 'bootstrap3', 'bootstrap4','bootstrap5')
+    #CRISPY_TEMPLATE_PACK = ('bootstrap5', 'uni_form', 'bootstrap4')
+    #CRISPY_ALLOWED_TEMPLATE_PACK = 'bootstrap5'
+    CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
     INTERNAL_IPS = ["192.168.10.92","192.168.10.31", "192.168.11.136"]
 
